@@ -1,0 +1,300 @@
+.cybersecurity-icons {
+    text-align: center;
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    padding-bottom: 20px;
+    font-family: 'Cinzel';
+}
+
+.segment-title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-family: 'Cinzel';
+    color: #0080FF;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    pointer-events: none;
+    z-index: -100;
+}
+
+.video video {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+nav {
+    position: absolute !important;
+    z-index: 100 !important;
+    width: 100% !important;
+    background-color: transparent !important;
+    padding-right: 5% !important;
+    padding-top: 3% !important;
+}
+
+nav div ul li a{
+    color: white !important;
+    font-family: 'Cinzel';
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+nav div ul li a:hover{
+    color: black !important;
+    background-color: white !important;
+    border-radius: 25px;
+    text-shadow: 0px 0px 10px black;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 23%;
+    color: white;
+    font-size: 300%;
+    font-family: 'Carter One';
+    font-style: bold;
+}
+
+.perfil {
+     margin-bottom: 30px;
+     font-family: 'Athiti';
+     color: gray;
+     text-align: justify;
+}
+
+.image {
+    text-align: center;
+}
+
+.icons {
+    text-align: center;
+    margin-top: 10px;
+    /*margin-bottom: 25px;*/
+}
+
+.fa {
+    margin-right: 10px;
+    color: gray;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.icon-twitter i {
+    color: #0080FF;
+}
+
+a.icon-git i {
+    color: black;
+}
+
+a.icon-stack i {
+    color: #ff9900;
+}
+
+a i:hover {
+    text-shadow: 0px 0px 5px black;
+}
+
+.segment-color {
+    background-color: #F2F2F2;
+}
+
+.inputs-size {
+    width: 50%;
+}
+
+.message {
+    height: 150px;
+}
+
+.tags {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: -12px;
+    list-style: none;
+}
+
+.tags li, .tags a {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    font-size: 11px;
+}
+
+.tags a {
+    margin-left: 20px;
+    padding: 0 10px 0 12px;
+    background: gray;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px; 
+    border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-right-radius: 4px;    
+    border-top-right-radius: 4px;    
+} 
+
+.tags a:before {
+    content: "";
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-color: transparent gray transparent transparent;
+    border-style: solid;
+    border-width: 12px 12px 12px 0;      
+}
+
+.tags a:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    float: left;
+    width: 4px;
+    height: 4px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background: #fff;
+    -moz-box-shadow: -1px -1px 2px #004977;
+    -webkit-box-shadow: -1px -1px 2px #004977;
+    box-shadow: -1px -1px 2px #004977;
+}
+
+.tags a:hover {
+    background: #0089e0;
+} 
+
+.tags a:hover:before {
+    border-color:transparent #0089e0 transparent transparent;
+}
+
+.tags li {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.div-tags {
+    margin-top: 20px;
+}
+
+.star-filled {
+    color: #D7DF01;
+}
+
+.star-empty {
+    color: #D8D8D8;
+}
+
+.project {
+    margin-bottom: 20px;
+    font-family: 'Athiti';
+    color: gray;
+}
+
+.project-title {
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+}
+
+.cybersecurity-text {
+    font-family: 'Athiti';
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.abilities-title {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+div ul li i.fa {
+    float: right;
+}
+
+.btn {
+    font-family: 'Athiti';
+}
+
+footer {
+    background-color: black;
+    color: gray;
+}
+
+footer div.row {
+    height: 60px;
+}
+
+footer div.container {
+    padding-bottom: 0px;
+}
+
+footer span {
+    font-family: 'Athiti';
+    color: #585858;
+}
+
+.web-source {
+    float: right;
+}
+
+.no-bullets li {
+    margin-bottom: 10px;
+}
+
+p small {
+    font-style: italic;
+}
+/* To resize the text above the video doing responsive the text */
+  
+@media screen and (max-width: 330px) {
+    .overlay {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 550px) and (min-width: 331px) {
+    .overlay {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 551px) {
+    .overlay {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 701px){
+    .overlay {
+        font-size: 200%;
+    }
+}
