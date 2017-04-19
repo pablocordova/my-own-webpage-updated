@@ -262,6 +262,10 @@ footer span {
     color: #585858;
 }
 
+.footer-email {
+    color: white;
+}
+
 .web-source {
     float: right;
 }
@@ -275,13 +279,16 @@ p small {
 }
 /* To resize the text above the video doing responsive the text */
   
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 340px) {
     .overlay {
         font-size: 70%;
     }
+    .for-small-size {
+        font-size: 90%;
+    }
 }
 
-@media screen and (max-width: 550px) and (min-width: 331px) {
+@media screen and (max-width: 550px) and (min-width: 341px) {
     .overlay {
         font-size: 100%;
     }

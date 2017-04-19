@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded hidden-xs-down">
             <button class="navbar-toggler navbar-toggler-right" type="buttton" data-toggle="collapse" data-target="#full-options" aria-controls="full-options" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -237,6 +237,7 @@
                     <span>
                         Developed with last web technologies for my presentation.
                     </span>
+                    <p></p>
                 </div>
                 <div class="col-12 col-sm-12 col-lg-3 align-self-center div-tags">
                     <ul class="tags">
@@ -592,11 +593,15 @@
         </div>
     </div>
     <!-- Segment Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="row justify-content-center">
+                <div class="col-sm-12 contact">
+                    <span class="segment-title">CONTACT</span>
+                </div>
                 <div class="col-12 col-sm-12 col-lg-8 align-self-center">
-                    <span>Developed by : Pablo César Córdova Morales </span>
+                    <span class="footer-email">Email : pccm_77@hotmail.com </span><br>
+                    <span class="for-small-size">Developed by : Pablo César Córdova Morales </span>
                     <span class="web-source">Source Code:
                         <a href="https://github.com/pablocordova/my-own-webpage" target="_blank">Github</a> 
                     </span>
@@ -604,6 +609,7 @@
             </div>
         </div>
     </footer>
+    <app-root></app-root>
     <script type="text/javascript" src="public/js/jquery.min.js"></script>
     <script type="text/javascript" src="public/js/tether.min.js"></script>
     <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
