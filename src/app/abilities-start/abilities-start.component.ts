@@ -9,10 +9,15 @@ import { Input } from '@angular/core';
 export class AbilitiesStartComponent implements OnInit {
 
 	@Input('count') count_star;
+	star;
+	no_star;
 
-  	constructor() { }
+  	constructor() {}
 
   	ngOnInit() {
+  		this.star = Array(this.count_star.number).fill('0');
+  		this.no_star = Array(5-this.count_star.number).fill('0');
+
   	}
 
 }
