@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AbilitiesStartComponent } from './abilities-start/abilities-start.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AbilitiesStartComponent
+    AbilitiesStartComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

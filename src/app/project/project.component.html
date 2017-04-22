@@ -1,0 +1,16 @@
+<div class="row justify-content-center project">
+    <div class="col-12 col-sm-12 col-lg-5">
+        <span class="project-title">{{ data_project.title }}</span><br>
+        <span>
+            {{ data_project.description }}
+        </span>
+        <p><small>{{ data_project.footer }}</small></p>
+    </div>
+    <div class="col-12 col-sm-12 col-lg-3 align-self-center div-tags">
+        <ul class="tags">
+            <li *ngFor = "let tag of tags">
+                <a href="#" target="_blank">{{ tag }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
