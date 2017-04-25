@@ -3,6 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var Form = require('./models/form').Form;
 
 var app = express();
 
@@ -15,9 +16,9 @@ app.use(express.static(path.join(__dirname, 'public/css')));
 app.use(express.static(path.join(__dirname, 'public/js')));
 app.use(express.static(path.join(__dirname, 'public/asset')));
 
-
-app.post('/contact', function(req, res) {
-	res.send('OK');
+app.post('/', function(req, res) {
+    saveForm(req.body);
+    res.redirect('/#contact');
 });
 
 // catch 404 and forward to error handler
@@ -39,3 +40,14 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+function saveForm(dataForm) {
+    var form = new Form(dataForm);
+    form.save().then(function() {
+        console.log("saved correctly");
+    }, function(err) {
+        if (err) {
+            console.log("Error saving" + String(err));
+        }
+    })
+}
