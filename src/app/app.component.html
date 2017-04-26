@@ -204,23 +204,24 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-sm-12 col-lg-8">
-                <form ngNoForm autocomplete="on" action="/" method="POST">
+                <!-- form ngNoForm autocomplete="on" action="/" method="POST" -->
+                <form autocomplete="on" (ngSubmit)="saveForm()">
                     <legend>Full name</legend>
                     <div class="row">
                         <div class="form-group col-6">
-                            <input type="text" class="form-control" name="fname" id="fname" maxlength="30" placeholder="Firstname" required>
+                            <input type="text" class="form-control" name="fname" id="fname" maxlength="30" placeholder="Firstname" required [(ngModel)]="myContact.fname" #fname ="ngModel" >
                         </div>
                         <div class="form-group col-6">
-                            <input type="text" class="form-control" name="sname" id="sname" maxlength="30" placeholder="Surname" required>
+                            <input type="text" class="form-control" name="sname" id="sname" maxlength="30" placeholder="Surname" required [(ngModel)]="myContact.sname" #sname ="ngModel">
                         </div>
                     </div>
                     <div class="form-group">
                         <legend>Email Address</legend>
-                        <input type="text" class="form-control inputs-size" name="email" id="email" placeholder="Email" required>
+                        <input type="text" class="form-control inputs-size" name="email" id="email" placeholder="Email" required [(ngModel)]="myContact.email" #email ="ngModel">
                     </div>
                     <div class="form-group">
                         <legend>Your Message</legend>
-                        <textarea id="message" class="form-control message" name="message"></textarea>
+                        <textarea id="message" class="form-control message" name="message" required [(ngModel)]="myContact.message" #message ="ngModel"></textarea>
                     </div>
                     <div class="form-group">
                         <button type="submit" class ="btn btn-info">Send Message</button>
