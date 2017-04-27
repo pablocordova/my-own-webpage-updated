@@ -46,14 +46,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-function saveForm(dataForm) {
-    var form = new Form(dataForm);
-    form.save().then(function() {
-        return {'result': 'success'};
-    }, function(err) {
-        if (err) {
-            return {'result': 'error'};
-        }
-    })
-}
