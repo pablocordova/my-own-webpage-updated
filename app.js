@@ -16,9 +16,9 @@ app.use(express.static(path.join(__dirname, 'public/css')));
 app.use(express.static(path.join(__dirname, 'public/js')));
 app.use(express.static(path.join(__dirname, 'public/asset')));
 
-app.post('/', function(req, res) {
+app.post('/api', function(req, res) {
     saveForm(req.body);
-    res.redirect('/#contact');
+    res.send(JSON.stringify({ a: 1 }));
 });
 
 // catch 404 and forward to error handler
