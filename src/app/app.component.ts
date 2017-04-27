@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { Contact } from "./contact";
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { Observable } from "rxjs";
-
-import 'rxjs/add/operator/toPromise';
 
 @Component({
     selector: 'app-root',

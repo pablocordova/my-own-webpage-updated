@@ -17,8 +17,14 @@ app.use(express.static(path.join(__dirname, 'public/js')));
 app.use(express.static(path.join(__dirname, 'public/asset')));
 
 app.post('/api', function(req, res) {
-    saveForm(req.body);
-    res.send(JSON.stringify({ a: 1 }));
+    var form = new Form(req.body);
+    form.save().then(function() {
+        var result = JSON.stringify({ result: 'success'});
+        res.send(result);
+    }, function(err) {
+        var result = JSON.stringify({ result: 'error'});
+        res.send(result);
+    })
 });
 
 // catch 404 and forward to error handler
@@ -44,10 +50,10 @@ module.exports = app;
 function saveForm(dataForm) {
     var form = new Form(dataForm);
     form.save().then(function() {
-        console.log("saved correctly");
+        return {'result': 'success'};
     }, function(err) {
         if (err) {
-            console.log("Error saving" + String(err));
+            return {'result': 'error'};
         }
     })
 }
