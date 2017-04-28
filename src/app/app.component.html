@@ -208,19 +208,25 @@
                     <legend>Full name</legend>
                     <div class="row">
                         <div class="form-group col-6">
-                            <input type="text" class="form-control" name="fname" id="fname" maxlength="30" placeholder="Firstname" required [(ngModel)]="myContact.fname" #fname ="ngModel" >
+                            <input type="text" class="form-control" name="fname" id="fname" maxlength="30" placeholder="Firstname" required [(ngModel)]="myContact.fname" >
                         </div>
                         <div class="form-group col-6">
-                            <input type="text" class="form-control" name="sname" id="sname" maxlength="30" placeholder="Surname" required [(ngModel)]="myContact.sname" #sname ="ngModel">
+                            <input type="text" class="form-control" name="sname" id="sname" maxlength="30" placeholder="Surname" required [(ngModel)]="myContact.sname">
                         </div>
                     </div>
                     <div class="form-group">
                         <legend>Email Address</legend>
-                        <input type="text" class="form-control inputs-size" name="email" id="email" placeholder="Email" required [(ngModel)]="myContact.email" #email ="ngModel">
+                        <input type="text" class="form-control inputs-size" name="email" id="email" placeholder="Email" required [(ngModel)]="myContact.email">
                     </div>
                     <div class="form-group">
                         <legend>Your Message</legend>
-                        <textarea id="message" class="form-control message" name="message" required [(ngModel)]="myContact.message" #message ="ngModel"></textarea>
+                        <textarea id="message" class="form-control message" name="message" required [(ngModel)]="myContact.message"></textarea>
+                    </div>
+                    <div *ngIf="successMessage" class="alert alert-success" role="alert">
+                        Thanks for your Message!
+                    </div>
+                    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                        please fill out all the fields!
                     </div>
                     <div class="form-group">
                         <button type="submit" class ="btn btn-info">Send Message</button>
