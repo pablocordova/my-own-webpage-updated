@@ -1,4 +1,4 @@
- MY WEB PAGE 
+# MY WEB PAGE 
 
 My source code of my own webpage
 
@@ -11,6 +11,10 @@ My source code of my own webpage
 ## Libraries
 * Bootstrap 4.0.0 - alpha 6
 * Nodemailer 4.0.1
+
+## Configuration
+
+* In the file ```app.js```: change ```user``` and ```pass``` for you gmail account.
 
 ## How to run
 
