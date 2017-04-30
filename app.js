@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var Form = require('./models/form').Form;
+var nodemailer = require('nodemailer');
 
 var app = express();
 
@@ -16,7 +17,42 @@ app.use(express.static(path.join(__dirname, 'public/css')));
 app.use(express.static(path.join(__dirname, 'public/js')));
 app.use(express.static(path.join(__dirname, 'public/asset')));
 
+/**
+ * Create reusable transport object using the default SMTP transport
+ */
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'xxxxxx@gmail.com',
+        pass: 'xxxxxx'
+    },
+    // Warning only use it when the host is untrusted
+    tls: {
+         rejectUnauthorized: false
+    }
+
+});
+
 app.post('/api', function(req, res) {
+    
+    // Setup email data
+    let mailOptions = {
+        from: '<' + req.body.email + '>',
+        to: 'pccm_77@hotmail.com',
+        subject: 'Email from my webpage, of ' + req.body.fname + ' ' + req.body.sname,
+        text: req.body.message
+    };
+
+    // Send data via email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if(error) {
+            console.log("Error sending the email " + error);
+        } else {
+            console.log("Email sent correctly");
+        }
+    });
+
+    // Save data in database
     var form = new Form(req.body);
     form.save().then(function() {
         var result = JSON.stringify({ result: 'success'});
