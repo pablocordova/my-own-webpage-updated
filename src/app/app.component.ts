@@ -29,9 +29,6 @@ export class AppComponent {
 
     successMessage = false;
 
-    // Error message case not fill out the fields.
-    errorMessage = false;
-
     constructor(private http: Http) { }
 
     ngOnInit() {
@@ -42,20 +39,6 @@ export class AppComponent {
     }
 
     saveForm() {
-
-        // Validate form, I am not using a directive of angular yet.
-        // TODO: use directive of angular to validate correctly.
-
-        if(this.myContact['fname'] == '' || 
-            this.myContact['sname'] == '' ||
-            this.myContact['email'] == '' || 
-            this.myContact['message'] == '') {
-                this.errorMessage = true;
-                return;
-        }
-        else {
-            this.errorMessage = false;
-        }
 
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
